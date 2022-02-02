@@ -39,9 +39,6 @@
       font-size: 4rem;
       color: $px-dark;
     }
-    @include down-sm {
-      display: none;
-    }
   }
   .nav-menu {
     padding-top: 10px;

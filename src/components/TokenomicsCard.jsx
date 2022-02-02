@@ -3,27 +3,22 @@ import React from "react";
 const tokenomicsData = [
   {
     name: "Total Supply	",
-    number: "1,000,000,000",
+    number: "100,000,000",
     subtitle: null,
   },
   {
     name: "Launch Supply",
-    number: "165,220,000",
-    subtitle: null,
-  },
-  {
-    name: "IDO Price",
-    number: "$0.000695",
+    number: "430,000",
     subtitle: null,
   },
   {
     name: "Launch Price",
-    number: "$0.00070",
+    number: "$2",
     subtitle: null,
   },
   {
     name: "Token Symbol",
-    number: "$LegioPad",
+    number: "$LEGIO",
     subtitle: null,
     ticker: true,
   },

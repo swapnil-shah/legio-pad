@@ -52,7 +52,9 @@ const Slider = () => {
                 >
                   <a
                     className="px-btn px-btn-dark"
-                    href="#" onClick={e => e.preventDefault()}
+                    href="https://pancakeswap.finance/swap"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     {sliderContent.btnText}
                   </a>

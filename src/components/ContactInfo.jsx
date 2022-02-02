@@ -1,8 +1,8 @@
 import React from "react";
+import { PopupButton } from "@typeform/embed-react";
 
 const ContactInfo = () => {
   return (
-    
     <section id="cta">
       <div className="container py-4 rounded-3">
         <div className="row">
@@ -10,12 +10,16 @@ const ContactInfo = () => {
             <div className="contact-info">
               <h4>Want To Launch Your Project On LegioPad?</h4>
               <p>
-              We have generous offers available for getting you started right away!
+                We have generous offers available for getting you started right
+                away!
               </p>
               <div className="mt-4">
-                <a className="px-btn px-btn-dark" href="#" onClick={e => e.preventDefault()}>
+                <PopupButton id="r5JLNVlb" className="px-btn px-btn-dark">
                   Apply to Launch
-                </a>
+                </PopupButton>
+                {/* <a className="" href="#" >
+                  Apply to Launch
+                </a> */}
               </div>
             </div>
           </div>

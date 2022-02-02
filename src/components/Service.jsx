@@ -6,13 +6,6 @@ import { IoIosPeople } from "react-icons/io";
 import { MdCollectionsBookmark } from "react-icons/md";
 import { MdVerifiedUser } from "react-icons/md";
 import { RiHandCoinFill } from "react-icons/ri";
-// import { BsFillShieldLockFill } from "react-icons/bs";
-// import { BsFillShieldLockFill } from "react-icons/bs";
-// import { BsFillShieldLockFill } from "react-icons/bs";
-// import { BsFillShieldLockFill } from "react-icons/bs";
-// import { BsFillShieldLockFill } from "react-icons/bs";
-
-
 
 const ServiceContent = [
   {
@@ -22,7 +15,7 @@ const ServiceContent = [
   },
   {
     icon: <GiTrophy />,
-    title: "Intermission Pee 2 Game",
+    title: "Pee 2 Earn",
     descriptions: `Battle to PEE and win`,
   },
   {
@@ -37,7 +30,7 @@ const ServiceContent = [
   },
   {
     icon: <MdVerifiedUser />,
-    title: "Colosseum",
+    title: "Virtual Colosseum",
     descriptions: `Seats that could be used for virtual events or for rental`,
   },
   {
@@ -51,18 +44,15 @@ export default function Service() {
     <>
       <div className="row">
         <div className="title">
-          <h3>LegioPad Blockchain includes</h3>
+          <h3>Our Weapons</h3>
         </div>
         {ServiceContent.map((val, i) => (
-          <div
-            className="col-sm-12 col-md-4"
-            key={i}
-          >
+          <div className="col-sm-12 col-md-4" key={i}>
             <div className="feature-box shadow">
               <div>
                 {val.icon}
                 <h5>{val.title}</h5>
-                <p dangerouslySetInnerHTML={{__html: val.descriptions}}></p>
+                <p dangerouslySetInnerHTML={{ __html: val.descriptions }}></p>
               </div>
             </div>
           </div>

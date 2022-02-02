@@ -3,7 +3,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "./assets/scss/main.scss";
 import ReactGA from "react-ga";
-ReactGA.initialize("UA-214066645-1");
+ReactGA.initialize("UA-219230830-1");
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 ReactDOM.render(<App />, document.getElementById("root"));

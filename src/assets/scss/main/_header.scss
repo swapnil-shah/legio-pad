@@ -35,9 +35,12 @@
       text-align: center;
       padding-top: 10px;
     }
-    svg{
-      font-size:4rem;
-      color:$px-dark
+    svg {
+      font-size: 4rem;
+      color: $px-dark;
+    }
+    @include down-sm {
+      display: none;
     }
   }
   .nav-menu {
@@ -120,12 +123,22 @@
 .tooltip {
   font-size: 12px;
 }
-
+.mob-logo {
+  display: none;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 11;
+  svg {
+    font-size: 4rem;
+    color: $px-dark;
+  }
+}
 .mob-header {
   display: none;
   position: fixed;
-  right: 20px;
-  top: 20px;
+  right: 12px;
+  top: 12px;
   z-index: 11;
   > .d-flex {
     align-items: center;
@@ -141,6 +154,10 @@
   }
   .fixed-header & {
     background: $px-gray;
+  }
+  svg {
+    font-size: 4rem;
+    color: $px-dark;
   }
 }
 
@@ -170,7 +187,8 @@
 }
 
 @include down-sm {
-  .mob-header {
+  .mob-header,
+  .mob-logo {
     display: block;
   }
   .header-left {

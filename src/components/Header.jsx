@@ -3,16 +3,10 @@ import Scrollspy from "react-scrollspy";
 import { Link } from "react-router-dom";
 import { GiBrutalHelm } from "react-icons/gi";
 
-import {
-  IoLayers
-} from "react-icons/io5";
-import {
-  FaChartPie
-} from "react-icons/fa";
-import {
-  GiStarsStack
-} from "react-icons/gi";
-import { FaHome ,FaWpforms} from "react-icons/fa";
+import { IoLayers } from "react-icons/io5";
+import { FaChartPie } from "react-icons/fa";
+import { GiStarsStack } from "react-icons/gi";
+import { FaHome, FaWpforms } from "react-icons/fa";
 
 const HeaderTwo = () => {
   const [click, setClick] = useState(false);
@@ -27,6 +21,9 @@ const HeaderTwo = () => {
   }, [click]);
   return (
     <>
+      <div className="mob-logo">
+        <GiBrutalHelm />
+      </div>
       {/* Header */}
       <div className="mob-header">
         <button className="toggler-menu" onClick={handleClick}>
@@ -51,14 +48,14 @@ const HeaderTwo = () => {
           <div className="hl-top">
             <div className="hl-logo">
               <Link to="/">
-                <GiBrutalHelm/>
+                <GiBrutalHelm />
               </Link>
             </div>
           </div>
 
           <Scrollspy
             className="nav nav-menu"
-            items={["home", "features", "tokenomics", "tiers","cta"]}
+            items={["home", "features", "tokenomics", "tiers", "cta"]}
             currentClassName="active"
             offset={-60}
           >

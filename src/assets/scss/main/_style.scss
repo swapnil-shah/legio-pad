@@ -1,0 +1,484 @@
+/* Section
+---------------------*/
+.section {
+  padding: 100px 0;
+  position: relative;
+  @include down-md {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  @include down-sm {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.m-15px-tb {
+  margin-top: 15px;
+  padding-bottom: 15px;
+}
+
+/* Title
+-----------------------------------*/
+.title {
+  margin-bottom: 0.5rem;
+
+  @include down-xsm {
+    text-align: center;
+  }
+  h3 {
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    font-weight: 600;
+    font-size: 3rem;
+    display: inline-block;
+    vertical-align: top;
+    &:before {
+      content: none;
+    }
+    &:after {
+      content: "";
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: $px-theme;
+      position: absolute;
+      top: -8px;
+      left: -15px;
+      z-index: -1;
+      -webkit-animation: slide-both-sidee 4s infinite both;
+      animation: slide-both-side 4s infinite both;
+      @include down-md {
+        top: -4px;
+        left: 0;
+      }
+    };
+     @include down-sm {
+        font-size: 2rem;
+     }
+     @include down-xsm {
+        font-size: 2rem;
+        &:after {
+          content: none;
+        }
+        &:before {
+          content: "";
+          width: 100%;
+          height: 5px;
+          background: $px-theme;
+          position: absolute;
+          left: 0;
+          bottom:-5px;
+          z-index: -1;
+          -webkit-animation: none;
+          animation: none;
+          border-radius: unset;
+        }
+     }
+  }
+}
+
+
+/* Home Banner
+-----------------------------------*/
+.home-banner {
+  position: relative;
+  overflow: hidden;
+  background: $px-theme;
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hb-me, .overlay {
+    position: absolute;
+    right: 0;
+    width: 50vw;
+    height: 100%;
+    background-size: cover;
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: top left;
+    @media screen and (max-width: 1199px) {
+      width: 84vw;
+      opacity: 0.6;
+    }
+    @include down-md {
+      opacity: 0.6;
+      width: 80vw;
+    }
+    @include down-xsm {
+      background-size: cover;
+      background-position: center center;
+      opacity: 0.1;
+      left: 0;
+      width: 100vw;
+    }
+
+    @include down-xsm {
+      opacity: 0.05;
+    }
+  }
+  .overlay{
+    background-color: rgba(0,0,0,.5);
+    display: none;
+     @include down-sm {
+       display: block;
+    }
+  }
+  .full-screen {
+    min-height: 100vh;
+    @media screen and (max-width: 767px) {
+      min-height: auto;
+      padding: 120px 0;
+    }
+  }
+  .type-box {
+    padding-top: 90px;
+    padding-bottom: 50px;
+    h6 {
+      font-size: 20px;
+      font-weight: 400;
+      margin: 0 0 20px;
+
+      @include down-sm {
+        font-size: 18px;
+        margin: 0 0 10px;
+      }
+    }
+    h1 {
+      font-size: 80px;
+      font-weight: 700;
+      line-height: 1;
+      margin: 0 0 15px;
+
+      @include down-lg {
+        font-size: 70px;
+      }
+      @include down-sm {
+        font-size: 48px;
+      }
+    }
+    .lead {
+      color: $px-dark;
+      font-weight: 500;
+      font-size: 30px;
+      text-transform: capitalize;
+      margin-bottom: 15px;
+      line-height: 1.2;
+
+      @include down-sm {
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+    }
+    .desc {
+      font-size: 1rem;
+      max-width: 450px;
+      font-weight: 900;
+    }
+    .btn-bar {
+      padding-top: 10px;
+      a {
+        font-size: 25px;
+        line-height: 1;
+        font-weight: 400;
+        position: relative;
+        text-decoration: none;
+        padding-left: 0;
+        @include transition(ease all 0.35s);
+        @include down-sm {
+          font-size: 20px;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          margin: auto;
+          width: 0;
+          height: 2px;
+          background: currentColor;
+          @include transition(ease all 0.35s);
+        }
+        &:hover {
+          padding-left: 45px;
+          &:after {
+            width: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.loop-text {
+  line-height: 1 !important;
+}
+/* About
+-----------------------------------*/
+.about-illustration {
+  @include down-md {
+    margin-bottom: 40px;
+  }
+  .img-in {
+    max-width: 356px;
+    max-height: 358px;
+    margin: auto;
+    overflow: hidden;
+    border: 5px solid $px-gray;
+    // border-radius:50%;
+    img {
+      object-fit: cover;
+    }
+  }
+  .img {
+    position: relative;
+  }
+  .info {
+    text-align: center;
+    padding-top: 40px;
+
+    h3 {
+      font-weight: 500;
+
+      font-size: 30px;
+    }
+    p {
+      margin: 0;
+      font-size: 16px;
+    }
+  }
+  .social-icons {
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    right: 0;
+    a {
+      background: $px-dark;
+      color: $px-gray;
+      width: 35px;
+      height: 35px;
+      line-height: 31px;
+      border: 2px solid $px-gray;
+      text-align: center;
+      border-radius: 50%;
+      position: relative;
+      margin: 0 5px;
+      @include transition(ease all 0.35s);
+      @include scale(1);
+      i {
+        line-height: inherit;
+      }
+      &:nth-child(1) {
+        top: -25px;
+      }
+      &:nth-child(2) {
+        top: -8px;
+      }
+      &:nth-child(4) {
+        top: -8px;
+      }
+      &:nth-child(5) {
+        top: -25px;
+      }
+      &:hover {
+        @include scale(1.1);
+        background: $px-theme;
+        color: $px-gray;
+      }
+    }
+  }
+}
+
+.about-info {
+  .title {
+    margin-bottom: 30px;
+  }
+  .info-list {
+    padding-top: 15px;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    li {
+      padding: 4px 0;
+    }
+    label {
+      margin: 0;
+      font-weight: 500;
+      padding-right: 10px;
+    }
+  }
+}
+
+/* Feature Box
+-----------------------------------*/
+.feature-box {
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  @include down-sm {
+    padding: 30px 0;
+    text-align: center;
+  }
+  // border: 1px solid $px-theme;
+  .icon {
+    line-height: 60px;
+    font-size: 40px;
+    color: $px-gray;
+  }
+
+  svg {
+    color: $px-gray;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    @include down-sm {
+      margin-bottom: 1rem;
+    }
+  }
+  h5 {
+    margin-bottom: 0.5rem;
+    color: $px-light;
+    transition: 0.5s ease-in-out;
+  }
+  p {
+    margin: 0;
+    transition: 0.5s ease-in-out;
+  }
+}
+
+.feature-item {
+  // margin: 1rem;
+  @include down-xsm {
+    margin: 1rem 0;
+  }
+}
+
+/* Experience
+-----------------------------------*/
+
+.tiers-row {
+  padding: 35px;
+  margin: 1rem;
+  border:1px solid $px-light;
+  @include down-xsm {
+    border:none;
+    margin: 1rem 0;
+  }
+
+  h6 {
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  svg {
+    color: $px-light;
+    font-size: 5rem;
+    @include down-xsm {
+      margin: 1rem 0;
+      width: 200px;
+    }
+  }
+  @include down-xsm {
+    padding: 30px 0;
+    margin: 0;
+  }
+}
+.tiers-row:not(:last-child) {
+    @include down-xsm {
+      border-bottom:1px solid $px-light;
+  }
+}
+.tokenomics-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin:2rem auto;
+  .count-inner {
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1;
+    font-family: "Syne";
+    color: $px-light;
+    margin-bottom: .5rem;
+    @include down-sm {
+      font-size: 2rem;
+    }
+    // -webkit-text-stroke: 2px $px-dark;
+  }
+    @include down-sm {
+       margin:0;
+       padding:30px 0;
+    }
+}
+/* Contact Us
+-----------------------------------*/
+#cta {
+  
+    color: $px-dark;
+    background-color: $px-theme;
+  .container {
+  }
+}
+.contact-info {
+  @include down-md {
+    margin-bottom: 20px;
+  }
+  h4 {
+    font-size: 34px;
+    font-weight: 500;
+  }
+  p {
+    color: $px-gray;
+  }
+  ul {
+    margin: 0;
+    padding: 10px 0 0;
+    list-style: none;
+  }
+  li {
+    font-size: 18px;
+    font-weight: 500;
+
+    line-height: 1.3;
+    position: relative;
+
+    i {
+      width: 30px;
+      text-align: center;
+      color: $px-theme;
+      font-size: 22px;
+      font-weight: 600;
+    }
+    span {
+      padding-left: 15px;
+    }
+    + li {
+      padding-top: 20px;
+    }
+  }
+}
+
+@keyframes down {
+  0% {
+    top: 5px;
+    opacity: 0;
+  }
+  30% {
+    top: 15px;
+    opacity: 1;
+  }
+  100% {
+    top: 25px;
+    opacity: 0;
+  }
+}

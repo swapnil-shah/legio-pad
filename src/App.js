@@ -1,0 +1,33 @@
+import React, { useEffect } from "react";
+import Routes from "./router/Routes";
+import ScrollToTop from "./components/ScrollToTop";
+import AnimatedCursor from "react-animated-cursor";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+const App = () => {
+  useEffect(() => {
+    AOS.init({
+      once: true,
+      disable: "phone",
+      duration: 400,
+      easing: "ease-out-cubic",
+    });
+  }, []);
+  return (
+    <>
+      <AnimatedCursor
+        innerSize={8}
+        outerSize={44}
+        color="255, 255, 255"
+        outerAlpha={0.2}
+        innerScale={0.7}
+        outerScale={1.4}
+      />
+      <ScrollToTop />
+      <Routes />
+    </>
+  );
+};
+
+export default App;

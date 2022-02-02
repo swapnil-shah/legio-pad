@@ -3,7 +3,6 @@ import TextLoop from "react-text-loop";
 
 const sliderContent = {
   name: "LegioPad",
-  designation: "Airdrop to IDO Participants",
   description: `The smell of the sand, the roar echoing throughout the Colosseum, welcome to our Legio. We fight as one to hoist the best IDOs in Crypto.`,
   btnText: "Take your seat",
 };
@@ -30,9 +29,12 @@ const Slider = () => {
                   data-aos-delay="200"
                 >
                   <TextLoop>
-                    <p className="loop-text lead">Deflationary Mechanism</p>
-                    <p className="loop-text lead">IDO Fees</p>
-                    <p className="loop-text lead">Staking</p>
+                    <p className="loop-text lead">Multichain Launchpad</p>
+                    <p className="loop-text lead">Pee 2 Earn</p>
+                    <p className="loop-text lead">Citizens DAO</p>
+                    <p className="loop-text lead">NFT Drop Platform</p>
+                    <p className="loop-text lead">Virtual Colosseum</p>
+                    <p className="loop-text lead">Legio Rations</p>
                   </TextLoop>
                 </div>
 

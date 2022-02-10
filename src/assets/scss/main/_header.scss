@@ -11,8 +11,7 @@
   top: 0;
   height: 100vh;
   background: $px-dark;
-  border-right: 1px solid rgba($px-dark, 0.1);
-
+  z-index: 99;
   .scroll-bar {
     height: 100%;
     @include down-sm {

@@ -2,7 +2,7 @@ import React from "react";
 import { FaTwitter, FaTelegramPlane, FaBullhorn } from "react-icons/fa";
 
 const SocialShare = [
-  { Social: <FaTwitter />, link: "https://twitter.com/metaplayio" },
+  { Social: <FaTwitter />, link: "https://twitter.com/legiopad" },
   { Social: <FaTelegramPlane />, link: "https://t.me/MetaPlayVerified" },
   { Social: <FaBullhorn />, link: "https://t.me/MetaPlayAnn" },
 ];
